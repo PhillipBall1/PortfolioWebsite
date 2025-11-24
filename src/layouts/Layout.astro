@@ -7,17 +7,18 @@ import "aos/dist/aos.css";
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
+
 		<title>Phillip Ball</title>
+		<meta name="generator" content={Astro.generator} />
 	</head>
+
 	<body>
 		<slot />
-		<script
-			type="module"
-			src="/src/scripts/aos-init.js"
-			{...{ "client:load": true }}></script>
+
+		<script type="module" src="/src/scripts/aos-init.js"></script>
 	</body>
 </html>
 
