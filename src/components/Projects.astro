@@ -1,0 +1,196 @@
+---
+import LopesMarket from "../assets/images/lopesmarket.png";
+import CheeseRacer from "../assets/images/cheeseracer.png";
+import FocusLock from "../assets/images/focuslock.png";
+---
+
+<section id="projects">
+	<div data-aos="fade-up">
+		<h2>Projects</h2>
+		<p class="projects-text">
+			Here are some of the projects that I have created over the years.
+		</p>
+	</div>
+
+	<div class="projects-grid">
+		<div class="project-card" data-aos="fade-up" data-aos-delay="100">
+			<h3>FocusLock</h3>
+			<img src={FocusLock.src} alt="FocusLock Image" class="project-img" />
+
+			<p>
+				FocusLock is a lightweight application developed with .NET WPF that
+				helps the user reduce distractions while using their Windows device.
+				With the ability to schedule tasks or activate the focus system
+				manually, FocusLock blocks access to distracting applications, allowing
+				users to maintain concentration and productivity.
+			</p>
+			<div class="line">
+				<a href="https://github.com/PhillipBall1/FocusLock" target="_blank"
+					>View on GitHub</a
+				>
+			</div>
+		</div>
+
+		<div class="project-card" data-aos="fade-up" data-aos-delay="200">
+			<h3>CheeseRacer</h3>
+			<img src={CheeseRacer.src} alt="CheeseRacer Image" class="project-img" />
+
+			<p>
+				CheeseRacer is a simple steam game developed in Unity. It is a block
+				running game where the player can gain score based on how long they can
+				survive and how many stages they can beat. The game features a
+				leaderboard system that allows players to compete for the highest score,
+				hosted using AWS Lambda and MongoDB. The game also utilizes the Steam
+				API to get player information displays, etc.
+			</p>
+			<div class="line">
+				<a href="https://github.com/PhillipBall1/CheeseRacer" target="_blank"
+					>View on GitHub</a
+				>
+				&nbsp;|&nbsp;
+				<a
+					href="https://store.steampowered.com/app/3382870/Cheese_Racer"
+					target="_blank">View on Steam</a
+				>
+			</div>
+		</div>
+
+		<div class="project-card" data-aos="fade-up" data-aos-delay="300">
+			<h3>Lopes Market</h3>
+			<img
+				src={LopesMarket.src}
+				alt="Lopes Market Screenshot"
+				class="project-img"
+			/>
+
+			<p>
+				Lopes Market is a University related project created to demonstrate
+				cloud production. This website uses AWS Lambda with MongoDB to create a
+				simple full-stack environment with a user and item dataset. User info is
+				hashed and stored securely in the database, and users can log in to view
+				a cart system, with moderator accounts able to add/remove items from the
+				store from the web page.
+			</p>
+			<div class="line">
+				<a
+					href="https://github.com/PhillipBall1/CST-323LopesMarket"
+					target="_blank">View on GitHub</a
+				>
+				&nbsp;|&nbsp;
+				<a href="https://lopesmarket.pages.dev" target="_blank">View Website</a>
+			</div>
+		</div>
+
+		<div class="project-card" data-aos="fade-up" data-aos-delay="400">
+			<h3>RaidVault</h3>
+
+			<!--
+			<img
+			src="/assets/raidvault.png"
+			alt="Raid Loot Manager Screenshot"
+			class="project-img"
+		    /> 
+			-->
+			<p>
+				RaidVault is a World of Warcraft boss drop management application.
+				Deciding where boss drops go can be tricky, so Raid Vault was created to
+				make a loot system that doesn't rely on spreadsheets or manual tracking.
+				The application utilizes Blizzard's API and WarcraftLogs API to get
+				player item data and player performance data to help guilds make
+				informed decisions on where to allocate boss drops to best benefit the
+				raid. As of writing this, Blizzard has disabled public access to their
+				API, so the application is currently not functional until access is
+				restored. Once access is restored, I will work on the application
+				installation guide and further the GitHub display.
+			</p>
+			<div class="line">
+				<a href="https://github.com/PhillipBall1/RaidVault" target="_blank"
+					>View on GitHub</a
+				>
+			</div>
+		</div>
+	</div>
+</section>
+
+<style>
+	#projects {
+		padding: 1rem 20rem;
+		width: 100%;
+		height: 125vh;
+		background: linear-gradient(180deg, var(--surface) 0%, var(--accent) 100%);
+		text-align: left;
+	}
+
+	#projects h2 {
+		font-size: 2rem;
+		margin-bottom: 1rem;
+		color: var(--text);
+	}
+
+	.projects-text {
+		margin-bottom: 2rem;
+		color: var(--text-alt);
+	}
+
+	.projects-grid {
+		display: grid;
+		grid-template-columns: repeat(2, 0.325fr);
+		gap: 2rem;
+	}
+
+	.project-card {
+		background-color: var(--surface-alt, #f9f9f9);
+		border-radius: 12px;
+		padding: 1rem;
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+		transition:
+			transform 0.2s,
+			box-shadow 0.2s;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.project-card:hover {
+		transform: translateY(-5px);
+		box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+	}
+
+	.project-card h3 {
+		margin-top: 0.5rem;
+		font-size: 1.25rem;
+		color: var(--text);
+	}
+
+	.project-card p {
+		margin: 0.5rem 0;
+		color: var(--text-alt);
+		font-size: 0.95rem;
+	}
+
+	.project-card .line {
+		margin-top: auto;
+	}
+
+	.project-card a {
+		color: var(--accent-alt, #3b82f6);
+		text-decoration: none;
+		font-weight: 600;
+	}
+
+	.project-card a:hover {
+		text-decoration: underline;
+	}
+
+	.project-img {
+		width: 100%;
+		height: auto;
+		border-radius: 8px;
+	}
+
+	@media screen and (max-width: 768px) {
+		.projects-grid {
+			grid-template-columns: 1fr; /* single column on mobile */
+			gap: 1rem;
+		}
+	}
+</style>

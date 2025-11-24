@@ -1,0 +1,134 @@
+<section id="hero">
+	<div data-aos="fade-right">
+		<h1 id="name">Phillip Ball</h1>
+		<h2 id="title">
+			Software Developer •
+			<span class="text-blue-600 font-semibold" id="typed"></span>
+		</h2>
+		<p id="tagline">
+			I build practical, user-focused software, from full-stack web apps and
+			desktop tools to small games and API-driven systems. BS in Software
+			Development from Grand Canyon University.
+		</p>
+
+		<div id="cta">
+			<a class="button primary" href="#projects">View Projects</a>
+			<a
+				class="button secondary"
+				href="https://github.com/PhillipBall1"
+				target="_blank">GitHub</a
+			>
+		</div>
+	</div>
+</section>
+<script>
+	const words = [
+		"Full-stack",
+		"Applications",
+		"Indie games",
+		"API-driven systems",
+	];
+	let i = 0,
+		j = 0,
+		currentWord = "",
+		isDeleting = false;
+	const typed = document.getElementById("typed");
+	type();
+
+	function type() {
+		if (i >= words.length) i = 0;
+		const word = words[i];
+
+		if (isDeleting) {
+			currentWord = word.substring(0, j--);
+		} else {
+			currentWord = word.substring(0, j++);
+		}
+
+		if (typed) {
+			typed.textContent = currentWord;
+		}
+
+		if (!isDeleting && j === word.length + 1) {
+			isDeleting = true;
+			setTimeout(type, 800);
+		} else if (isDeleting && j === 0) {
+			isDeleting = false;
+			i++;
+			setTimeout(type, 300);
+		} else {
+			setTimeout(type, isDeleting ? 50 : 120);
+		}
+	}
+</script>
+<style>
+	#hero {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		gap: 0.5rem;
+		padding: 0rem 20rem;
+		width: 100%;
+		height: 100vh;
+		background-color: var(--surface);
+	}
+
+	#name {
+		font-size: 48px;
+		font-weight: 700;
+		margin: 0;
+		color: var(--text);
+	}
+
+	#title {
+		font-size: 24px;
+		font-weight: 400;
+		margin: 0;
+		color: var(--text);
+	}
+
+	#tagline {
+		font-size: 18px;
+		color: var(--text);
+		margin-top: 6px;
+		margin-bottom: 24px;
+		max-width: 520px;
+		line-height: 1.6;
+	}
+
+	#cta {
+		display: flex;
+		gap: 16px;
+	}
+
+	.button {
+		padding: 10px 18px;
+		border-radius: 10px;
+		text-decoration: none;
+		font-size: 16px;
+		transition: opacity 0.2s;
+	}
+
+	.button {
+		background: var(--accent);
+		color: var(--text);
+		padding: 0.7rem 1.5rem;
+		border-radius: 14px;
+		font-weight: 600;
+		border: 2px solid var(--surface);
+		box-shadow: 3px 3px 0 var(--surface);
+		transition: 0.2s;
+	}
+
+	.button:hover {
+		transform: translate(-2px, -2px);
+		box-shadow: 5px 5px 0 var(--surface);
+	}
+
+	@media screen and (max-width: 768px) {
+		#hero {
+			display: block;
+			padding-top: 10%;
+		}
+	}
+</style>

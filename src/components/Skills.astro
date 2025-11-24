@@ -1,0 +1,153 @@
+---
+// Language Icons
+import CSharpIcon from "../assets/svg/csharp.svg";
+import TScriptIcon from "../assets/svg/tscript.svg";
+import SQLIcon from "../assets/svg/sql.svg";
+import LUAIcon from "../assets/svg/lua.svg";
+
+// Framework Icons
+import DotNetIcon from "../assets/svg/dotnet.svg";
+import AWSIcon from "../assets/svg/aws.svg";
+import AngularIcon from "../assets/svg/angular.svg";
+
+// Tools Icons
+import GitIcon from "../assets/svg/git.svg";
+import MongoIcon from "../assets/svg/mongo.svg";
+import UnityIcon from "../assets/svg/unity.svg";
+---
+
+<section id="skills-layout">
+	<div data-aos="fade-right">
+		<h2>Skills</h2>
+
+		<p class="subtext">
+			These are some of the skills that I work very efficiently with. I am
+			always looking to expand my skillset and learn new technologies to grow as
+			a developer. I believe that I can pick up new skills quickly and
+			effectively by applying my existing knowledge and experience.
+		</p>
+
+		<div id="skills">
+			<div class="skills-card" data-aos="zoom-in" data-aos-delay="300">
+				<h3>Languages</h3>
+				<ul>
+					<li>
+						<CSharpIcon width={75} />
+						<TScriptIcon width={75} height={75} />
+					</li>
+					<li>
+						<LUAIcon width={75} height={75} />
+						<SQLIcon width={75} height={75} />
+					</li>
+				</ul>
+			</div>
+
+			<div class="skills-card" data-aos="zoom-in" data-aos-delay="500">
+				<h3>Frameworks</h3>
+				<ul>
+					<li>
+						<DotNetIcon width={75} height={75} />
+						<AngularIcon width={75} height={75} />
+					</li>
+					<li>
+						<AWSIcon width={75} height={75} />
+					</li>
+				</ul>
+			</div>
+
+			<div class="skills-card" data-aos="zoom-in" data-aos-delay="700">
+				<h3>Tools</h3>
+				<ul>
+					<li>
+						<GitIcon width={75} height={75} />
+						<MongoIcon width={75} height={75} />
+					</li>
+					<li>
+						<UnityIcon width={75} height={75} />
+					</li>
+				</ul>
+			</div>
+
+			<div class="skills-card" data-aos="zoom-in" data-aos-delay="900">
+				<h3>Other</h3>
+				<ul>
+					<li>API Integrations</li>
+					<li>Steam Publishing</li>
+					<li>Video/Image Editing</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</section>
+
+<style>
+	#skills-layout {
+		padding: 1rem 20rem;
+		width: 100%;
+		height: 55vh;
+		background: linear-gradient(0deg, var(--surface) 0%, var(--accent) 100%);
+		text-align: left;
+	}
+
+	#skills-layout h2 {
+		font-size: 32px;
+		margin-bottom: 1rem;
+		color: var(--text);
+	}
+
+	#skills {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(100px, 20rem));
+	}
+
+	.subtext {
+		font-size: 18px;
+		line-height: 1.7;
+		margin-bottom: 3rem;
+		color: var(--text);
+		max-width: 650px;
+	}
+
+	.skills-card {
+		background-color: var(--surface-alt, #f9f9f9);
+		border-radius: 12px;
+		padding: 1.5rem;
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+		transition:
+			transform 0.2s,
+			box-shadow 0.2s;
+		width: 15rem;
+	}
+
+	.skills-card:hover {
+		transform: translateY(-5px);
+		box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+	}
+
+	.skills-card h3 {
+		margin-bottom: 0.75rem;
+		margin-top: 0rem;
+		color: var(--text);
+		font-size: 1.25rem;
+	}
+
+	.skills-card ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	.skills-card li {
+		padding: 4px 0;
+		font-size: 1rem;
+		font-weight: 600;
+		color: var(--text);
+	}
+
+	@media screen and (max-width: 768px) {
+		#skills {
+			grid-template-columns: 1fr;
+			gap: 1rem;
+		}
+	}
+</style>
