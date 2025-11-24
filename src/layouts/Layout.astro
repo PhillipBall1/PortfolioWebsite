@@ -8,15 +8,16 @@ import "aos/dist/aos.css";
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="icon" href="/favicon.svg" />
-		<script
-			type="module"
-			src="/src/scripts/aos-init.js"
-			{...{ "client:load": true }}></script>
+
 		<title>Phillip Ball</title>
 	</head>
 
 	<body>
 		<slot />
+		<script
+			type="module"
+			src="/src/scripts/aos-init.js"
+			{...{ "client:load": true }}></script>
 	</body>
 </html>
 
