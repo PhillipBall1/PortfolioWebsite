@@ -1,6 +1,5 @@
 ---
 import "../styles/global.css";
-import "aos/dist/aos.css";
 ---
 
 <html lang="en">
@@ -14,10 +13,6 @@ import "aos/dist/aos.css";
 
 	<body>
 		<slot />
-		<script
-			type="module"
-			src="/src/scripts/aos-init.js"
-			{...{ "client:load": true }}></script>
 	</body>
 </html>
 
