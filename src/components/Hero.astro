@@ -63,14 +63,12 @@
 </script>
 <style is:global>
 	#hero {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		gap: 0.5rem;
-		padding: 0rem 20rem;
+		padding: 18rem 20rem;
 		width: 100%;
-		height: 100vh;
-		background-color: var(--surface);
+		height: auto;
+		min-height: 40vh;
+		background: linear-gradient(0deg, var(--surface) 0%, var(--accent) 100%);
+		text-align: left;
 	}
 
 	#name {
@@ -125,10 +123,21 @@
 		box-shadow: 5px 5px 0 var(--surface);
 	}
 
-	@media screen and (max-width: 768px) {
-		#hero {
-			display: block;
-			padding-top: 10%;
-		}
+	@media screen and (max-width: 1200px) {
+	#hero {
+		padding: 1rem 10rem;
 	}
+}
+
+@media screen and (max-width: 900px) {
+	#hero {
+		padding: 1rem 5rem;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	#hero {
+		padding: 2rem 1.5rem;
+	}
+}
 </style>

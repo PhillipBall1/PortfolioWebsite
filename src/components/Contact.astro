@@ -27,13 +27,12 @@
 
 <style is:global>
 	#contact {
-		padding: 1rem 20rem;
+		padding: 5rem 20rem;
 		width: 100%;
-		height: 50vh;
+		height: auto;
+		min-height: 40vh;
 		background: linear-gradient(0deg, var(--surface) 0%, var(--accent) 100%);
 		text-align: left;
-		display: flex;
-		align-items: center;
 	}
 
 	#contact h2 {
@@ -85,10 +84,21 @@
 		text-decoration: underline;
 	}
 
-	@media screen and (max-width: 768px) {
-		#contact {
-			padding: 4rem 2rem;
-			height: auto;
-		}
+	@media screen and (max-width: 1200px) {
+	#contact {
+		padding: 1rem 10rem;
 	}
+}
+
+@media screen and (max-width: 900px) {
+	#contact {
+		padding: 1rem 5rem;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	#contact {
+		padding: 2rem 1.5rem;
+	}
+}
 </style>

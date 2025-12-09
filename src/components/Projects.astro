@@ -114,7 +114,7 @@ import RaidVault from "../assets/images/raidvault.png";
 	#projects {
 		padding: 1rem 20rem;
 		width: 100%;
-		height: 135vh;
+		min-height: 135vh;
 		background: linear-gradient(180deg, var(--surface) 0%, var(--accent) 100%);
 		text-align: left;
 	}
@@ -185,10 +185,41 @@ import RaidVault from "../assets/images/raidvault.png";
 		border-radius: 8px;
 	}
 
-	@media screen and (max-width: 768px) {
-		.projects-grid {
-			grid-template-columns: 1fr; /* single column on mobile */
-			gap: 1rem;
-		}
+@media screen and (max-width: 1200px) {
+	#projects {
+		padding: 1rem 10rem;
 	}
+}
+
+@media screen and (max-width: 900px) {
+	#projects {
+		padding: 1rem 5rem;
+	}
+.projects-grid {
+		grid-template-columns: 1fr;
+		gap: 1rem;
+	}
+
+	.project-card p {
+		font-size: 0.9rem;
+		line-height: 1.5;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	#projects {
+		padding: 1rem 1.5rem;
+	}
+
+	.projects-grid {
+		grid-template-columns: 1fr;
+		gap: 1rem;
+	}
+
+	.project-card p {
+		font-size: 0.9rem;
+		line-height: 1.5;
+	}
+}
+
 </style>
